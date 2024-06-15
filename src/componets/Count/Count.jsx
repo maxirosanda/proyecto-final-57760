@@ -13,7 +13,7 @@ const Count = ({count,handleCount,stock}) => {
     }
 
   return (
-    <div>
+    <div className='countContainer'>
         <button onClick={decrementCount}>-</button>
         <span>{count}</span>
         <button onClick={incrementCount}>+</button>

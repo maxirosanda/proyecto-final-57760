@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
 import { initializeApp } from "firebase/app"
+import './fontawesome.js'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDlp7-_zsd7K2xPxL7hWXmONYSoCL6E-Yg",
-  authDomain: "cursosabados57760.firebaseapp.com",
-  projectId: "cursosabados57760",
-  storageBucket: "cursosabados57760.appspot.com",
-  messagingSenderId: "978779098986",
-  appId: "1:978779098986:web:2c5098c12893bb519c5f13"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 }
 
 initializeApp(firebaseConfig)
